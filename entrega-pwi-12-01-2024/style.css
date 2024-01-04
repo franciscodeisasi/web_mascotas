@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    
+}
+h1{
+    text-align: center;
+}
+.tarjetas{
+    display: grid;
+    grid-template-areas:
+     "a b c"
+     "d e f"
+     "g h i";
+     justify-content: space-evenly;
+     margin-top: 10%;
+}
+.fondoColor{
+    background-color: grey;
+}
+.contenedor{
+    margin-bottom: 50px;
+    min-width: 116% !important;
+    
+}
+.imgSpace{
+    height: 60% !important;
+    
+}
+.perroLogo{
+
+}
+#checkbox{
+
+}
