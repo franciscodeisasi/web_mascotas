@@ -15,32 +15,6 @@ body{
     
 }
 
-.tarjetasPrincipal{
-   display: grid;
-   grid-template-areas: 
-    "a b c"
-    "d e f"
-    "g h i"
-    "j k l"
-    "m n ñ"
-    "o p q";
-    justify-content: space-evenly;
-     margin-top: 10%;
-}
-
-.fondoColor{
-    background-color: #F6D776;
-}
-.contenedorCard{
-    margin-bottom: 50px;
-    min-width: 116% !important;
-    
-}
-.imgSpace{
-    height: 60% !important;
-    
-}
-
 /* comienza la barra nav */
 
 .containedor{
@@ -107,7 +81,45 @@ body{
 
 /* termina la barra nav */
 
+/*comienza main */
 
+.tarjetasPrincipal{
+   display: grid;
+   grid-template-areas: 
+    "a b c"
+    "d e f"
+    "g h i"
+    "j k l"
+    "m n ñ"
+    "o p q";
+    justify-content: space-evenly;
+     margin-top: 10%;
+}
+
+.fondoColor{
+    background-color: #F6D776;
+}
+.contenedorCard{
+    margin-bottom: 50px;
+    min-width: 116% !important;
+    
+}
+.imgSpace{
+    height: 60% !important;
+    
+}
+
+/*termina main*/
+
+.footer{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.redes{
+    display: flex;
+    justify-content: space-between;
+}
 
 
 /*comienza 763*/
