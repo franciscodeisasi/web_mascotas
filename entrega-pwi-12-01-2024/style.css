@@ -4,22 +4,17 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-decoration: none !important;
+    list-style: none;
+    
 }
 
 body{
-    /*margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;*/
     vertical-align: baseline;
     background-color: #647D87 !important;
     
 }
-header{
-    margin: 1px;
-    padding: 1px;
-}
+
 .tarjetasPrincipal{
    display: grid;
    grid-template-areas: 
@@ -36,7 +31,7 @@ header{
 .fondoColor{
     background-color: #F6D776;
 }
-.contenedor{
+.contenedorCard{
     margin-bottom: 50px;
     min-width: 116% !important;
     
@@ -46,84 +41,77 @@ header{
     
 }
 
-#toggle{
-    position: absolute;
-    top: -100px;
-}
-nav{
-    position: absolute;
-    z-index: 10;
-    left: 0;
-    right: 0;
-    margin-top: 0 ;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 0 5%;
-    height: 100px;
-    background-color: #F6D776;
-    left: 13%;
-    right: 11%;
+/* comienza la barra nav */
 
+.containedor{
+    max-width: 1100px;
+    margin: 0 auto;
 }
-.mascotasLogo{
-    float: left;
-    width: 40%;
-    height: 100%;  
-    display: flex;
-    align-items: center;
-   
+.back{
+    padding: 32px 0;
+    background-color: #F6D776;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200;
     
 }
-.perrologo{
-    float: left;
-    width: 25%;
-    height: 100%;  
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     align-items: center;
-}
-.list{
-    float: right;
-    padding: 0%;
-    margin: 0;
-    width: 60%;
-    height: 99%;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
+    z-index: 1000;
+}
+.menu .navbar ul li {
+    position: relative;
+    float: left;
 }
 
-.list li{
-    list-style: none;
-}
-.list a{
-    display: block;
-    text-transform: uppercase;
-    padding: 15px;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px ;
     color: darkslategrey;
-
+    
 }
-nav .list a:hover{
+
+#menu{
+    display: none;
+}
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer ;/*cursor*/
+    display: none;
+}
+
+
+.menu .navbar ul li a:hover{
     border-bottom: 4px solid cornflowerblue;
 }
-nav .icon-bars{
-    display: none;
-    position: absolute;
-    right: 5%;
-    top: 50%;
-    transform: translateY(-50%);
+
+
+.img {
+    height: 60px;
+    width: auto;
 }
-nav .icon-bars .line{
-    width: 30px;
-    height: 5px;
-    background-color: antiquewhite;
-    margin: 5px;
-    border-radius: 5px;
-    transition: all .3s ease-in-out;
-}
-/*comienza 720*/
-@media(min-width:720px) and (max-width:1200px) {
+
+/* termina la barra nav */
+
+
+
+
+/*comienza 763*/
+@media(min-width:763px) and (max-width:1200px) {
 
     .tarjetasPrincipal{
         display: grid;
@@ -143,48 +131,169 @@ nav .icon-bars .line{
          
 
     }
-    .contenedor{
+    .contenedorCard{
         margin-bottom: 50px;
     min-width: 100% !important;
     }
-    .mascotasLogo{
-        float: left;
-        width: 20%;
-        height: 100%;  
-        display: flex;
-        align-items: center;
-       
+    
+ }
+ /*comienza 762*/
+ @media(max-width:762px){
+    
+    
+    .tarjetasPrincipal{
+        display: grid;
+        grid-template-areas: 
+        "a b "
+        "c d "
+        "e f "
+        "g h "
+        "i j"
+        "k l"
+        "m n"
+        "ñ o"
+        "p q";
+        justify-content: space-around;
+         margin-top: 20%;
+         min-width: 100%;
+         
+
+    }
+    .contenedorCard{
+        margin-bottom: 50px;
+    min-width: 100% !important;
+    }
+    
+    
+    
+    /*comienza barra nav*/
+    .menu{
+        padding: 30px;
+    }
+    .menu label {
+        display: initial;
+    }
+    .back {
+        padding: 64px 0;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #F6D776;
+        display: none;
+        text-align: center;
         
     }
-    .perrologo{
-        float: left;
+    .menu .navbar ul li {
         width: 100%;
-        height: 100%;  
-        display: flex;
-        align-items: center;
+    }
+
+    .menu .navbar ul li a{
+        padding: 0;
+        
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+    .menu-icono{
+        width: 60px;
+    }
+    .img{
+        display: none;
+    }
+    .menu .navbar ul li a:hover{
+        border-bottom: 1px solid cornflowerblue;
+    }
+    /*termina barra nav*/
 }
-    .list{
-    float: right;
-    padding: 0%;
-    margin: 0;
-    width: 80%;
-    height: 99%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-    nav{
-    position: absolute;
-    z-index: 10;
-    left: 0;
-    right: 0;
-    top: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 0 5%;
-    height: 100px;
-    background-color: #F6D776;
-    
-}
- }
- /*comienza 375*/
  
+
+
+
+@media(max-width:762px) {
+    
+    
+    .tarjetasPrincipal{
+        display: grid;
+        grid-template-areas: 
+        "a"
+        "b"
+        "c"
+        "d"
+        "e"
+        "f"
+        "g"
+        "h"
+        "i"
+        "j"
+        "k"
+        "l"
+        "m"
+        "n"
+        "ñ"
+        "o"
+        "p"
+        "q";
+        justify-content: space-around;
+         margin-top: 20%;
+         min-width: 100%;
+         
+
+    }
+    .contenedorCard{
+        margin-bottom: 50px;
+    min-width: 100% !important;
+    }
+    
+    
+    
+    /*comienza barra nav*/
+    .menu{
+        padding: 30px;
+    }
+    .menu label {
+        display: initial;
+    }
+    .back {
+        padding: 64px 0;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #F6D776;
+        display: none;
+        text-align: center;
+        
+    }
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    .menu .navbar ul li a{
+        padding: 0;
+        
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+    .menu-icono{
+        width: 60px;
+    }
+    .img{
+        display: none;
+    }
+    .menu .navbar ul li a:hover{
+        border-bottom: 1px solid cornflowerblue;
+    }
+    /*termina barra nav*/
+}
